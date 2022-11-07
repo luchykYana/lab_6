@@ -21,7 +21,7 @@ public class Order implements Serializable {
 
     @Override
     public String toString() {
-        return "\n\t\t\tclasses.Order{" +
+        return "\n\t\t\tOrder{" +
                 "pizza=" + pizza +
                 ", number=" + number +
                 '}';

@@ -29,7 +29,7 @@ public class OrderList implements Serializable {
 
     @Override
     public String toString() {
-        return "\n\t\tclasses.OrderList{" +
+        return "\n\t\tOrderList{" +
                 "id=" + id +
                 ", desiredTime=" + desiredTime +
                 ", orders=" + orders +

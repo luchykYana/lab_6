@@ -24,7 +24,7 @@ public class Pizza implements Serializable {
 
     @Override
     public String toString() {
-        return "\n\t\t\t\tclasses.Pizza{" +
+        return "\n\t\t\t\tPizza{" +
                 "name='" + name + '\'' +
                 ", weight=" + weight +
                 ", price=" + price +

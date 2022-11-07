@@ -4,6 +4,7 @@ import classes.Order;
 import classes.OrderList;
 import classes.Visitor;
 import enums.PizzaEnum;
+import org.w3c.dom.ls.LSOutput;
 
 import java.time.Duration;
 import java.util.HashMap;
@@ -33,7 +34,7 @@ public class DisplayHelper {
 
     public static void printTask3(List<Visitor> orders, String name) {
         System.out.println("Result Task 3");
-        System.out.println("classes.Pizza with name '" + name + "' buy " + orders.size() + " customers");
+        System.out.println("Pizza with name '" + name + "' buy " + orders.size() + " customers");
         for (var order : orders) {
             System.out.println("id: " + order.getId() + " | orders: " + order.getOrders());
         }
@@ -41,7 +42,7 @@ public class DisplayHelper {
 
     public static void printTask5(Visitor visitor, List<Order> orders) {
         System.out.println("Result Task 5");
-        System.out.println("classes.Visitor #" + visitor.getId() + " " + visitor.getAddress() + " has " + orders.size() + " favourite item(s)");
+        System.out.println("Visitor #" + visitor.getId() + " " + visitor.getAddress() + " has " + orders.size() + " favourite item(s)");
 
         for (var key : orders) {
             System.out.println(key.getPizza().getName() + " " + key.getNumber() + " times");
@@ -51,17 +52,26 @@ public class DisplayHelper {
     public static void printTask5(HashMap<String, List<Visitor>> list) {
         System.out.println("Result Task 5");
         for (var key : list.keySet()) {
-            System.out.println(key + " " + list.get(key));
+            System.out.println("key: " + key);
+            for (var item: list.get(key)) {
+                System.out.println("\tvisitor: " + item.getId() + ". ");
+//                for (var item2: item.getOrders()) {
+//                    for (var item3: item2.getOrders()) {
+//                        System.out.println("\t\t" + item3.getPizza().getName());
+//                    }
+//                }
+            }
         }
     }
 
     public static void printTask6(Map<OrderList, Duration> res) {
         System.out.println("Result Task 6");
 
-        res.forEach((x, y) -> System.out.println("classes.Order id: " + x.getId() + " Extension time: " + y.toMinutes()));
+        res.forEach((x, y) -> System.out.println("Order id: " + x.getId() + " Extension time: " + y.toMinutes()));
     }
 
     public static void printItem(List<String> item) {
+        System.out.println("Result Task 2");
         System.out.println(item);
     }
 
@@ -82,7 +92,7 @@ public class DisplayHelper {
         System.out.println("Choose visitor: ");
         int i = 1;
         for (var visitor : visitors) {
-            System.out.println(i + ". classes.Visitor #" + visitor.getId() + ". " + visitor.getAddress());
+            System.out.println(i + ". Visitor #" + visitor.getId() + ". " + visitor.getAddress());
             i++;
         }
     }

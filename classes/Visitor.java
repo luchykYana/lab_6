@@ -28,7 +28,7 @@ public class Visitor implements Serializable {
 
     @Override
     public String toString() {
-        return "\n\tclasses.Visitor{" +
+        return "\n\tVisitor{" +
                 "id=" + id +
                 ", address='" + address + '\'' +
                 ", orders=" + orders +

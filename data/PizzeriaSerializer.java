@@ -6,7 +6,7 @@ import java.io.*;
 
 public class PizzeriaSerializer {
     public static Pizzeria DeserializePizzeria() {
-        System.out.println("Deserialize classes.Pizzeria");
+        System.out.println("Deserialize Pizzeria");
         Pizzeria pizzeria = null;
         try {
             FileInputStream fileInputStream = new FileInputStream("inputData.ser");
@@ -19,7 +19,7 @@ public class PizzeriaSerializer {
         } catch (IOException i) {
             i.printStackTrace();
         } catch (ClassNotFoundException c) {
-            System.out.println("classes.Pizza not found");
+            System.out.println("Pizza not found");
             c.printStackTrace();
         }
 

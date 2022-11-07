@@ -89,7 +89,7 @@ public class Pizzeria implements Serializable {
 
     @Override
     public String toString() {
-        return "classes.Pizzeria{" +
+        return "Pizzeria{" +
                 "pizzaList=" + pizzaList +
                 ", visitorList=" + visitorList +
                 '}';

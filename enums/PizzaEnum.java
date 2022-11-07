@@ -62,7 +62,7 @@ public enum PizzaEnum {
 
     @Override
     public String toString() {
-        return "enums.PizzaEnum{" +
+        return "PizzaEnum{" +
                 "name='" + name + '\'' +
                 ", ingredients=" + ingredients +
                 '}';
